@@ -1,0 +1,25 @@
+##### State in solidity smart contracts #####
+- Solidity runs on the Ethereum Virtual Machine (Decentralised computation engine, not exclusive to Ethereum also used by other blockchains)
+- When deploying smart contracts to the blockchain we essentially send our contract code to a address on the network.
+- This address can store persistent data, but expensive to initalise and modify that data. Reading data is free.
+- We can bake in public functions that are available to be interacted with via third party users. 
+- Think of approving spend on a token, under the hood this is executing a command on someones solidity smart contract.
+
+
+##### Remix; Online IDE centered around solidity #####
+- Compile and debug smart contracts on the site.
+- Deploy to a JavaScript VM, effectively a localise VM that can test smart contracts.
+
+
+
+##### Local development #####
+- Need nodejs and install Truffle which provides a suite of tools for interacting with contracts on blockchain; https://archive.trufflesuite.com/docs/truffle/how-to/install/
+- Ganache; One click blockchain that runs on local system. Copy cat of Ethereum with mock addresses and pretend ether and deploy smart contracts; https://archive.trufflesuite.com/docs/ganache/
+- If we want to use remote test nets to deploy smart contracts we need API key from Alchemy, it acts as a node on the network. 
+- Think of the entire ethereum network; it comprises of a series of nodes all interconnected and form the entire decentralised network. Alchemy 
+  places a node on that network and provides us access to it via API key; https://www.alchemy.com/
+- Create new app and activate the required networks, in my case base sepolia testnet, copy the url + api key into .env
+- Run 'truffle init' to initialise with truffle config. (Creates contracts, migrations and tests folder + truffle-config.js)
+- Current truffle config is setup to point at sepolia base testnet details.
+- Run 'truffle migrate --network basesepolia'
+- Can query the transaction hash on https://sepolia.basescan.org/
