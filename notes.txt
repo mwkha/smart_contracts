@@ -23,3 +23,9 @@
 - Current truffle config is setup to point at sepolia base testnet details.
 - Run 'truffle migrate --network basesepolia'
 - Can query the transaction hash on https://sepolia.basescan.org/
+- If we query the contract address we can verify and publish our contract
+- Now we can interact with our contract using" 'truffle console --network basesepolia'
+- 'const test = await HelloWorldContract2.deployed()'
+- 'test.myStateVar()' will list the var that gets set by constructor.
+- We can also use the updateVar function 'test.updateVar()'
+- If we try 'test.myStateVar()' again we see it changes.
